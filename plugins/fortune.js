@@ -7,7 +7,7 @@ plugin.help = 'fortunes and stuff';
 plugin.author = 'justin';
 
 plugin.on('chat', function(bot, msg) {
-  var match = msg.text.match(/^\.(fortune-help|fortune)\s?(\w+)?/);
+  var match = msg.text.match(/^\.(fortune-help|fortune)\s?([a-z|0-9|-]+)?/);
   if(match) {  
     var fortune_type = '';
     if (match[2]) {
