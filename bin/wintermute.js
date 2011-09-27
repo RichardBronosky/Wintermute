@@ -1,5 +1,3 @@
-// vim: ts=2 sw=2 et :
-
 var fs = require('fs');
 var path = require('path');
 var repl = require('repl');
