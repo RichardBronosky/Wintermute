@@ -6,7 +6,9 @@ plugin.listen = false;
 
 plugin.on('353', function(bot, msg) {
   if(plugin.listen){
-    bot.say(msg.params[2], 'ATTENTION ^^ '+msg.params[3]);
+    msg.params[3].match(/([^ ]+ ?){1,10}/g).forEach(function(names){
+      bot.say(msg.params[2], 'ATTENTION ^^ '+names);
+    })
   }
   plugin.listen = false;
 });
